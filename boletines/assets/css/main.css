@@ -1,0 +1,224 @@
+
+/* aqui va el comentario */
+
+/*
+p{
+  color:blue;
+}*/
+
+
+/*
+gray: AEB4A9
+pale: E0C1B3
+rose: B6465F fondo solido
+negro: 07020D
+indigo: 320D6D
+violeta claro:#B1C1FC
+*/
+
+/* regla q se usa al inicio de la creacion de hojas de estilo q la imagen ocupe todo el ancho */
+img{
+  max-width: 100%;
+}
+
+html{
+  font-family: 'Nunito', sans-serif;
+}
+
+/* elemento a son los links */
+a{
+  text-decoration: none;
+  color: #320D6D;
+}
+
+/* selector de pseudo clases para dismunir la opacidad del elemento link cambia su estado */
+a:hover{
+  opacity: 0.4;
+}
+
+.address{
+  font-weight: bold;
+  color: #320D6D;
+  font-size: 1.2em;
+  margin-top: 1em;
+  /* elementos q en su propiedad display son inline ignoran el margen */
+  display: inline-block;
+}
+
+.main-image{
+  /* texto fluja a la derecha de mi imagen */
+  float: left;
+  margin-right: 1em;
+  height: 360px;
+  width: 360px;
+}
+
+
+/* modificar el estilo del parrafo */
+.paragraph{
+  /* propiedad para mejorar el espaciado entre lineas del parrafo
+luego modificamos el grosor de la fuente
+  */
+  line-height: 1.8em;
+  font-weight: 300;
+
+}
+
+.title{
+  text-transform: uppercase;
+  padding-left: 0.5em;
+  text-align: center;
+}
+
+.container{
+background:#B6465F; /*  respaldo fondo solido  */
+/*background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);*/
+background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.content{
+max-width: 960px;
+width: 100%;
+height: 80vh;
+background-color: white;
+border-radius: 4px;
+/*box-shadow san las sombras: diferenciahorizontal diferenciavertical desenfoque amplitud color*/
+box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23); /*el valor q se ignora es la amplitud,sombras mas realistas con colores traslucidos y con opacidad*/
+position: relative;
+overflow: scroll;
+
+}
+
+
+.content{
+  padding: 1em;
+  height: 500px;
+}
+td{
+  display: block;
+  width: 100%;
+}
+td:nth-of-type(1){
+  /* pseudo clase q selecciona un elemento basado en su posicion cuando esta alado de otras etiquetas
+  de su mismo tipo,selecciona el numero tal del tipo td (fila) */
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #320D6D;
+}
+ th{
+  display: none;
+}
+
+
+@media (min-width:900px) {
+  th{
+    display: table-cell;
+  }
+  td{
+    display: table-cell;
+    width: auto;
+  }
+  td:nth-of-type(1){
+    font-size: 1em;
+    width: auto;
+  }
+  .content{
+    padding: 1.8em;
+  }
+
+}
+
+@media (min-height:550px) {
+.content{
+  height: 500px;
+}
+}
+
+
+.actions{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.position{
+  background-color: #B1C1FC;
+   color: white;
+  padding: 0.4em;
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+.close{
+  border-radius: 50%;
+  background-color: #320D6D;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.farfa-star,.fa-star{
+  color: #ffc400;
+}
+
+
+.table{
+width: 100%;
+border-spacing: 0;
+}
+
+/* celdas parte de arriba th encabezados y td celdas de abajo cuerpo de la tabla*/
+
+.table td, .table th{
+  padding: 1em;
+  text-align: left;
+}
+
+/*modifica los hijos q son las filas del padre tabla todas las filas pares odd o impares even aplicando propiedades a esa funcion*/
+.table tr:nth-child(even){
+/*background-color: #E0C1B3;*/
+background-color: #B1C1FC;
+
+}
+
+
+.title-item{
+  /* border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #320D6D; */
+  /* shorhandproperties */
+  border-bottom: solid 2px #320D6D;
+  font-size: 2em;
+  padding-bottom: 1em;
+  /* padding: arriba derecha abajo izquierda;
+  padding: arriba/abajo derecha/izquierda; */
+}
+
+
+
+
+
+/*
+.red{
+  height:200px;
+  width:100px;
+  background-color:red;
+}
+
+#boton-pago{
+  background-color:yelow;
+}
+
+*/
